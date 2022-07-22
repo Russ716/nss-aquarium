@@ -34,13 +34,14 @@ export const nonHolyFish = () => {
     return regularFish
 }
 
+
 export const FishList = () => {
     // Invoke the function that you imported from the database module
-    //? const fishes = getFish() (I don't think this is needed)
+    const fishes = getFish() 
     // Start building a string filled with HTML syntax
     htmlString += '<article class="fishList">'
     // Create HTML representations of each fish here
-    for (const fish of FishList) {
+    for (const fish of fishes) {
         // Why is there a backtick used for this string?
         //^ Backtick allows both the HTML tags like <section> and the
         //^ interpolated objects like "${fish.name" to print out for each
@@ -58,11 +59,7 @@ export const FishList = () => {
     return htmlString
 }
 
-let clergy = FishList(mostHolyFish)
-let military = FishList(soldierFish)
-let civilians = FishList(nonHolyFish)
 
-console.log(clergy);
-console.log(military);
-console.log(civilians);
-//* console.log(htmlString);
+
+
+ console.log(htmlString);
